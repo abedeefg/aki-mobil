@@ -3,6 +3,7 @@ import { useState, useEffect } from 'react'
 function App() {
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false)
   const [activeFaq, setActiveFaq] = useState(null)
+  const [activeTestimonial, setActiveTestimonial] = useState(0)
 
   useEffect(() => {
     const observerOptions = {
@@ -24,6 +25,14 @@ function App() {
     })
 
     return () => observer.disconnect()
+  }, [])
+
+  // Auto-slide testimonials
+  useEffect(() => {
+    const timer = setInterval(() => {
+      setActiveTestimonial(prev => (prev + 1) % 5)
+    }, 4000)
+    return () => clearInterval(timer)
   }, [])
 
   const waLink = "https://api.whatsapp.com/send/?phone=6285286111989&text=Halo+Admin+%E2%98%BA+Saya+ingin+menggunakan+layanan+Delivery+Aki+24+Jam.+Mohon+bantu+informasinya.+Terima+kasih.&type=phone_number&app_absent=0"
@@ -272,31 +281,77 @@ function App() {
             <h2 className="text-3xl md:text-4xl font-extrabold text-text-main mb-4">Dipercaya oleh Ribuan Pelanggan</h2>
             <div className="w-24 h-1 bg-surface-tint mx-auto rounded-full"></div>
           </div>
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-8 max-w-5xl mx-auto">
-            <div className="bg-white p-8 rounded-2xl border border-outline-variant/60 fade-in-up shadow-md hover:shadow-xl transition-all duration-300 hover:-translate-y-1 visible">
-              <div className="flex items-center gap-3 mb-4">
-                <div className="w-12 h-12 bg-primary/10 text-primary flex items-center justify-center rounded-full font-extrabold text-lg">
-                  AP
-                </div>
-                <div>
-                  <h4 className="text-lg font-bold mb-0.5 text-text-main">Andi Pratama</h4>
-                  <p className="text-text-muted text-xs">Makassar</p>
-                </div>
+
+          {/* Slideshow for all devices */}
+          <div className="max-w-2xl mx-auto relative">
+            {/* Prev Arrow */}
+            <button
+              onClick={() => setActiveTestimonial(prev => (prev - 1 + 5) % 5)}
+              className="absolute left-0 md:-left-16 top-1/2 -translate-y-1/2 z-10 w-10 h-10 md:w-12 md:h-12 rounded-full bg-white border border-outline-variant/60 shadow-md flex items-center justify-center hover:bg-surface-container-low hover:scale-110 active:scale-95 transition-all duration-200 text-text-muted hover:text-surface-tint"
+              aria-label="Previous testimonial"
+            >
+              <span className="material-symbols-outlined" style={{ fontSize: '24px' }}>chevron_left</span>
+            </button>
+
+            {/* Next Arrow */}
+            <button
+              onClick={() => setActiveTestimonial(prev => (prev + 1) % 5)}
+              className="absolute right-0 md:-right-16 top-1/2 -translate-y-1/2 z-10 w-10 h-10 md:w-12 md:h-12 rounded-full bg-white border border-outline-variant/60 shadow-md flex items-center justify-center hover:bg-surface-container-low hover:scale-110 active:scale-95 transition-all duration-200 text-text-muted hover:text-surface-tint"
+              aria-label="Next testimonial"
+            >
+              <span className="material-symbols-outlined" style={{ fontSize: '24px' }}>chevron_right</span>
+            </button>
+
+            <div className="overflow-hidden rounded-2xl mx-8 md:mx-0">
+              <div 
+                className="flex transition-transform duration-500 ease-in-out" 
+                style={{ transform: `translateX(-${activeTestimonial * 100}%)` }}
+                onTouchStart={(e) => { e.currentTarget.dataset.touchX = e.touches[0].clientX }}
+                onTouchEnd={(e) => {
+                  const startX = parseFloat(e.currentTarget.dataset.touchX)
+                  const endX = e.changedTouches[0].clientX
+                  const diff = startX - endX
+                  if (Math.abs(diff) > 50) {
+                    if (diff > 0) setActiveTestimonial(prev => (prev + 1) % 5)
+                    else setActiveTestimonial(prev => (prev - 1 + 5) % 5)
+                  }
+                }}
+              >
+                {[
+                  { initials: "AP", name: "Andi Pratama", loc: "Makassar", text: "Mobil saya tiba-tiba nggak bisa distarter malam hari. Tinggal chat WhatsApp, teknisinya cepat datang dan langsung ganti aki di tempat. Pelayanannya ramah, harganya juga jelas dari awal." },
+                  { initials: "RM", name: "Rina Maharani", loc: "Makassar", text: "Awalnya panik karena mobil mogok pas mau berangkat kerja. Untung ketemu layanan ini. Nggak sampai satu jam teknisi sudah datang dan mobil langsung hidup lagi. Recommended banget." },
+                  { initials: "BH", name: "Budi Hartono", loc: "Gowa", text: "Saya pesan aki jam 11 malam, teknisinya datang kurang dari 45 menit. Aki original dan langsung dipasangkan. Harga sangat bersaing dibanding toko offline. Pasti langganan!" },
+                  { initials: "DS", name: "Dewi Sartika", loc: "Maros", text: "Pertama kali pakai layanan ini karena rekomendasi teman. Ternyata benar, pelayanannya sangat profesional. Teknisinya juga cek kelistrikan gratis. Top markotop!" },
+                  { initials: "FA", name: "Farid Anwar", loc: "Makassar", text: "Sudah 3 kali pakai jasa AkiSulSel untuk kendaraan keluarga. Selalu puas dengan kecepatan respon dan kualitas aki yang dipasang. Garansi juga jelas. Sangat direkomendasikan." }
+                ].map((t, idx) => (
+                  <div key={idx} className="w-full flex-shrink-0 px-2">
+                    <div className="bg-white p-8 rounded-2xl border border-outline-variant/60 shadow-md hover:shadow-xl transition-all duration-300">
+                      <div className="flex items-center gap-3 mb-4">
+                        <div className="w-12 h-12 bg-primary/10 text-primary flex items-center justify-center rounded-full font-extrabold text-lg">
+                          {t.initials}
+                        </div>
+                        <div>
+                          <h4 className="text-lg font-bold mb-0.5 text-text-main">{t.name}</h4>
+                          <p className="text-text-muted text-xs">{t.loc}</p>
+                        </div>
+                      </div>
+                      <p className="text-text-main text-sm md:text-base font-medium italic leading-relaxed">"{t.text}"</p>
+                    </div>
+                  </div>
+                ))}
               </div>
-              <p className="text-text-main text-sm md:text-base font-medium italic leading-relaxed">"Mobil saya tiba-tiba nggak bisa distarter malam hari. Tinggal chat WhatsApp, teknisinya cepat datang dan langsung ganti aki di tempat. Pelayanannya ramah, harganya juga jelas dari awal."</p>
             </div>
-            
-            <div className="bg-white p-8 rounded-2xl border border-outline-variant/60 fade-in-up shadow-md hover:shadow-xl transition-all duration-300 hover:-translate-y-1 visible" style={{ transitionDelay: '100ms' }}>
-              <div className="flex items-center gap-3 mb-4">
-                <div className="w-12 h-12 bg-primary/10 text-primary flex items-center justify-center rounded-full font-extrabold text-lg">
-                  RM
-                </div>
-                <div>
-                  <h4 className="text-lg font-bold mb-0.5 text-text-main">Rina Maharani</h4>
-                  <p className="text-text-muted text-xs">Makassar</p>
-                </div>
-              </div>
-              <p className="text-text-main text-sm md:text-base font-medium italic leading-relaxed">"Awalnya panik karena mobil mogok pas mau berangkat kerja. Untung ketemu layanan ini. Nggak sampai satu jam teknisi sudah datang dan mobil langsung hidup lagi. Recommended banget."</p>
+
+            {/* Dots */}
+            <div className="flex justify-center gap-2 mt-8">
+              {[0,1,2,3,4].map(i => (
+                <button 
+                  key={i} 
+                  onClick={() => setActiveTestimonial(i)} 
+                  className={`h-3 rounded-full transition-all duration-300 ${activeTestimonial === i ? 'bg-surface-tint w-8' : 'bg-outline-variant/50 hover:bg-outline-variant w-3'}`}
+                  aria-label={`Testimonial ${i + 1}`}
+                />
+              ))}
             </div>
           </div>
         </section>
