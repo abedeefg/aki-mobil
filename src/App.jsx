@@ -168,7 +168,7 @@ function App() {
               className="w-full h-full bg-cover bg-center opacity-85 absolute inset-0 filter brightness-125 contrast-105 animate-bg-zoom" 
               style={{ backgroundImage: `url('/assets/hero.png')` }}
             ></div>
-            <div className="absolute inset-0 bg-gradient-to-r from-surface/95 via-surface/60 to-surface/20"></div>
+            <div className="absolute inset-0 bg-gradient-to-b from-surface via-surface/90 to-surface/40 md:bg-gradient-to-r md:from-surface md:via-surface/90 md:to-transparent"></div>
           </div>
           <div className="relative z-10 max-w-4xl fade-in-up animate-float visible">
             <span className="inline-block px-4 py-1.5 mb-6 bg-primary/10 text-primary font-bold rounded-full border border-primary/20 uppercase tracking-widest text-xs shadow-sm">
@@ -196,7 +196,7 @@ function App() {
               <img 
                 key={`b1-${idx}`} 
                 alt={brand.name} 
-                className="h-12 w-auto object-contain transition-all duration-300 hover:scale-125 grayscale hover:grayscale-0 cursor-pointer" 
+                className="h-20 w-auto object-contain transition-all duration-300 hover:scale-125 cursor-pointer" 
                 src={brand.src}
               />
             ))}
@@ -204,7 +204,7 @@ function App() {
               <img 
                 key={`b2-${idx}`} 
                 alt={brand.name} 
-                className="h-12 w-auto object-contain transition-all duration-300 hover:scale-125 grayscale hover:grayscale-0 cursor-pointer" 
+                className="h-20 w-auto object-contain transition-all duration-300 hover:scale-125 cursor-pointer" 
                 src={brand.src}
               />
             ))}
