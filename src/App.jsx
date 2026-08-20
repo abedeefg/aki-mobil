@@ -35,7 +35,7 @@ function App() {
     return () => clearInterval(timer)
   }, [])
 
-  const waLink = "https://api.whatsapp.com/send/?phone=6285286111989&text=Halo+Admin+%E2%98%BA+Saya+ingin+menggunakan+layanan+Delivery+Aki+24+Jam.+Mohon+bantu+informasinya.+Terima+kasih.&type=phone_number&app_absent=0"
+  const waLink = "https://api.whatsapp.com/send/?phone=6285696351715&text=Halo+Admin+%E2%98%BA+Saya+ingin+menggunakan+layanan+Delivery+Aki+24+Jam.+Mohon+bantu+informasinya.+Terima+kasih.&type=phone_number&app_absent=0"
 
   const brands = [
     { name: "Brand 1", src: "/assets/brand/Desain tanpa judul.png" },
@@ -108,20 +108,20 @@ function App() {
           <img src="/assets/logo/logo.png" alt="AkiSulSel Logo" className="h-12 w-auto object-contain rounded-md drop-shadow-sm" />
           <span className="font-extrabold text-2xl text-primary tracking-tighter hidden sm:inline-block">akisulsel.com</span>
         </a>
-        
+
         {/* Desktop Menu */}
         <div className="hidden md:flex items-center space-x-8">
           <a className="text-text-muted hover:text-primary font-bold text-sm tracking-wide hover:scale-115 transition-all duration-300" href="#">HOME</a>
           <a className="text-text-muted hover:text-primary font-bold text-sm tracking-wide hover:scale-115 transition-all duration-300" href="#services">LAYANAN</a>
           <a className="text-text-muted hover:text-primary font-bold text-sm tracking-wide hover:scale-115 transition-all duration-300" href="#kontak">KONTAK KAMI</a>
         </div>
-        
+
         <a className="bg-primary text-white font-bold text-sm px-6 py-3 rounded-lg hover:scale-105 active:scale-95 transition-all duration-300 hidden md:block text-center shimmer-btn shadow-md hover:shadow-lg" href={waLink} target="_blank" rel="noopener noreferrer">
           Hubungi Kami
         </a>
 
         {/* Mobile Menu Icon */}
-        <button 
+        <button
           onClick={() => setIsMobileMenuOpen(!isMobileMenuOpen)}
           className="md:hidden text-primary hover:scale-110 active:scale-90 transition-all duration-200 flex items-center justify-center p-2"
           aria-label="Toggle menu"
@@ -134,31 +134,31 @@ function App() {
         {/* Mobile Menu Dropdown */}
         {isMobileMenuOpen && (
           <div className="absolute top-20 left-0 w-full bg-white border-b border-surface-variant flex flex-col p-6 space-y-4 md:hidden shadow-xl animate-fade-in z-50">
-            <a 
-              className="text-text-muted hover:text-primary font-bold text-base py-2 border-b border-surface-variant/50 transition-colors" 
+            <a
+              className="text-text-muted hover:text-primary font-bold text-base py-2 border-b border-surface-variant/50 transition-colors"
               href="#"
               onClick={() => setIsMobileMenuOpen(false)}
             >
               HOME
             </a>
-            <a 
-              className="text-text-muted hover:text-primary font-bold text-base py-2 border-b border-surface-variant/50 transition-colors" 
+            <a
+              className="text-text-muted hover:text-primary font-bold text-base py-2 border-b border-surface-variant/50 transition-colors"
               href="#services"
               onClick={() => setIsMobileMenuOpen(false)}
             >
               LAYANAN
             </a>
-            <a 
-              className="text-text-muted hover:text-primary font-bold text-base py-2 border-b border-surface-variant/50 transition-colors" 
+            <a
+              className="text-text-muted hover:text-primary font-bold text-base py-2 border-b border-surface-variant/50 transition-colors"
               href="#kontak"
               onClick={() => setIsMobileMenuOpen(false)}
             >
               KONTAK KAMI
             </a>
-            <a 
-              className="bg-primary text-white font-bold text-base px-6 py-3 rounded-lg text-center shimmer-btn block shadow-md" 
-              href={waLink} 
-              target="_blank" 
+            <a
+              className="bg-primary text-white font-bold text-base px-6 py-3 rounded-lg text-center shimmer-btn block shadow-md"
+              href={waLink}
+              target="_blank"
               rel="noopener noreferrer"
               onClick={() => setIsMobileMenuOpen(false)}
             >
@@ -173,11 +173,11 @@ function App() {
         <section className="relative min-h-[85vh] md:min-h-[800px] flex items-center px-6 md:px-16 py-20 overflow-hidden bg-surface">
           {/* Background with Zoom animation */}
           <div className="absolute inset-0 z-0 mix-blend-normal overflow-hidden">
-            <div 
-              className="w-full h-full bg-cover bg-center opacity-85 absolute inset-0 filter brightness-125 contrast-105 animate-bg-zoom" 
+            <div
+              className="w-full h-full bg-cover bg-center absolute inset-0 filter brightness-110 contrast-105 saturate-110 animate-bg-zoom"
               style={{ backgroundImage: `url('/assets/hero.png')` }}
             ></div>
-            <div className="absolute inset-0 bg-gradient-to-b from-surface via-surface/90 to-surface/40 md:bg-gradient-to-r md:from-surface md:via-surface/90 md:to-transparent"></div>
+            <div className="absolute inset-0 bg-gradient-to-b from-surface/80 via-surface/50 to-transparent md:bg-gradient-to-r md:from-surface/85 md:via-surface/60 md:to-transparent"></div>
           </div>
           <div className="relative z-10 max-w-4xl fade-in-up animate-float visible">
             <span className="inline-block px-4 py-1.5 mb-6 bg-primary/10 text-primary font-bold rounded-full border border-primary/20 uppercase tracking-widest text-xs shadow-sm">
@@ -202,18 +202,18 @@ function App() {
         <section className="w-full overflow-hidden py-12 bg-white border-y border-surface-variant/80 opacity-95">
           <div className="animate-marquee flex gap-16 items-center">
             {brands.map((brand, idx) => (
-              <img 
-                key={`b1-${idx}`} 
-                alt={brand.name} 
-                className="h-20 w-auto object-contain transition-all duration-300 hover:scale-125 cursor-pointer" 
+              <img
+                key={`b1-${idx}`}
+                alt={brand.name}
+                className="h-20 w-auto object-contain transition-all duration-300 hover:scale-125 cursor-pointer"
                 src={brand.src}
               />
             ))}
             {brands.map((brand, idx) => (
-              <img 
-                key={`b2-${idx}`} 
-                alt={brand.name} 
-                className="h-20 w-auto object-contain transition-all duration-300 hover:scale-125 cursor-pointer" 
+              <img
+                key={`b2-${idx}`}
+                alt={brand.name}
+                className="h-20 w-auto object-contain transition-all duration-300 hover:scale-125 cursor-pointer"
                 src={brand.src}
               />
             ))}
@@ -229,13 +229,13 @@ function App() {
           </div>
           <div className="grid grid-cols-1 md:grid-cols-3 gap-8 max-w-7xl mx-auto">
             {advantages.map((adv, idx) => (
-              <div 
-                key={idx} 
+              <div
+                key={idx}
                 className="flex flex-col items-center text-center p-8 bg-primary-container/30 border border-primary-fixed/10 rounded-2xl transition-all duration-300 hover:-translate-y-2 hover:bg-primary-container/50 hover:border-secondary-container/40 group hover:shadow-lg"
                 style={{ transitionDelay: `${idx * 100}ms` }}
               >
                 <div className="w-24 h-24 mb-6 flex items-center justify-center transition-all duration-500 group-hover:scale-115 group-hover:rotate-6">
-                  <img alt={adv.title} className="w-full h-full object-contain filter brightness-110 drop-shadow" src={adv.img}/>
+                  <img alt={adv.title} className="w-full h-full object-contain filter brightness-110 drop-shadow" src={adv.img} />
                 </div>
                 <h3 className="text-xl md:text-2xl text-on-primary mb-3 font-bold">{adv.title}</h3>
                 <p className="text-on-primary/80 text-sm md:text-base group-hover:text-secondary-fixed transition-colors leading-relaxed">{adv.desc}</p>
@@ -256,17 +256,17 @@ function App() {
               <h3 className="text-xl md:text-2xl text-secondary-fixed font-bold mb-3">Pembelian Aki Baru</h3>
               <p className="text-on-primary/80 text-sm md:text-base leading-relaxed">Kami melayani pembelian Aki baru di outlet resmi kami dan bisa melakukan pengantaran langsung serta pemasangan aman di tempat Anda.</p>
             </div>
-            
+
             <div className="bg-primary p-8 border border-primary-fixed/10 card-hover-glow rounded-2xl fade-in-up visible shadow-md hover:border-secondary-container/30" style={{ transitionDelay: '100ms' }}>
               <h3 className="text-xl md:text-2xl text-secondary-fixed font-bold mb-3">Antar dan Pasang Aki</h3>
               <p className="text-on-primary/80 text-sm md:text-base leading-relaxed">Layanan *delivery* cepat dan pemasangan aki mobil maupun motor ke lokasi manapun Anda berada 24 jam nonstop.</p>
             </div>
-            
+
             <div className="bg-primary p-8 border border-primary-fixed/10 card-hover-glow rounded-2xl fade-in-up visible shadow-md hover:border-secondary-container/30" style={{ transitionDelay: '200ms' }}>
               <h3 className="text-xl md:text-2xl text-secondary-fixed font-bold mb-3">Tukar Tambah Aki Lama</h3>
               <p className="text-on-primary/80 text-sm md:text-base leading-relaxed">Tukarkan aki lama Anda yang sudah rusak atau soak dan nikmati potongan harga (trade-in) terbaik agar belanja Anda jauh lebih hemat.</p>
             </div>
-            
+
             <div className="bg-primary p-8 border border-primary-fixed/10 card-hover-glow rounded-2xl fade-in-up visible shadow-md hover:border-secondary-container/30" style={{ transitionDelay: '300ms' }}>
               <h3 className="text-xl md:text-2xl text-secondary-fixed font-bold mb-3">Pemeriksaan Kelistrikan Gratis</h3>
               <p className="text-on-primary/80 text-sm md:text-base leading-relaxed">Teknisi profesional kami akan melakukan pengecekan kesehatan dinamo starter dan alternator secara gratis sebelum mengganti aki.</p>
@@ -303,8 +303,8 @@ function App() {
             </button>
 
             <div className="overflow-hidden rounded-2xl mx-8 md:mx-0">
-              <div 
-                className="flex transition-transform duration-500 ease-in-out" 
+              <div
+                className="flex transition-transform duration-500 ease-in-out"
                 style={{ transform: `translateX(-${activeTestimonial * 100}%)` }}
                 onTouchStart={(e) => { e.currentTarget.dataset.touchX = e.touches[0].clientX }}
                 onTouchEnd={(e) => {
@@ -344,10 +344,10 @@ function App() {
 
             {/* Dots */}
             <div className="flex justify-center gap-2 mt-8">
-              {[0,1,2,3,4].map(i => (
-                <button 
-                  key={i} 
-                  onClick={() => setActiveTestimonial(i)} 
+              {[0, 1, 2, 3, 4].map(i => (
+                <button
+                  key={i}
+                  onClick={() => setActiveTestimonial(i)}
                   className={`h-3 rounded-full transition-all duration-300 ${activeTestimonial === i ? 'bg-surface-tint w-8' : 'bg-outline-variant/50 hover:bg-outline-variant w-3'}`}
                   aria-label={`Testimonial ${i + 1}`}
                 />
@@ -365,7 +365,7 @@ function App() {
             <div className="space-y-4">
               {faqs.map((faq, idx) => (
                 <div key={idx} className="bg-white border border-outline-variant/60 rounded-2xl overflow-hidden shadow-sm transition-all duration-300">
-                  <button 
+                  <button
                     onClick={() => setActiveFaq(activeFaq === idx ? null : idx)}
                     className="w-full text-left p-6 text-text-main flex justify-between items-center focus:outline-none hover:bg-surface-container-low transition-colors"
                   >
@@ -374,7 +374,7 @@ function App() {
                       expand_more
                     </span>
                   </button>
-                  <div 
+                  <div
                     className={`transition-all duration-300 ease-in-out overflow-hidden ${activeFaq === idx ? 'max-h-40 border-t border-surface-variant' : 'max-h-0'}`}
                   >
                     <p className="p-6 text-text-muted text-sm md:text-base leading-relaxed bg-white/50">
@@ -425,11 +425,11 @@ function App() {
       </footer>
 
       {/* Floating WhatsApp Button */}
-      <a 
-        aria-label="Chat via WhatsApp" 
-        className="fixed bottom-8 right-8 z-50 w-16 h-16 rounded-full wa-green flex items-center justify-center wa-pulse hover:scale-110 active:scale-95 transition-all duration-300 cursor-pointer shadow-2xl" 
-        href={waLink} 
-        target="_blank" 
+      <a
+        aria-label="Chat via WhatsApp"
+        className="fixed bottom-8 right-8 z-50 w-16 h-16 rounded-full wa-green flex items-center justify-center wa-pulse hover:scale-110 active:scale-95 transition-all duration-300 cursor-pointer shadow-2xl"
+        href={waLink}
+        target="_blank"
         rel="noopener noreferrer"
       >
         <svg className="w-8 h-8 fill-white" viewBox="0 0 24 24">
