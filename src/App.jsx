@@ -184,10 +184,10 @@ function App() {
               Buka 24 Jam Non-Stop
             </span>
             <h1 className="text-4xl sm:text-5xl md:text-6xl font-black text-text-main mb-6 leading-[1.15] tracking-tight drop-shadow-sm">
-              Ganti Aki 24 Jam,<br /><span className="text-surface-tint relative after:content-[''] after:absolute after:left-0 after:bottom-1 after:w-full after:h-[6px] after:bg-secondary-container/40 after:-z-10">Datang ke Lokasi Anda</span>
+              Toko Aki Makassar <span className="text-surface-tint relative after:content-[''] after:absolute after:left-0 after:bottom-1 after:w-full after:h-[6px] after:bg-secondary-container/40 after:-z-10">Terbaik & Terpercaya</span>
             </h1>
             <p className="text-base sm:text-lg md:text-xl text-text-muted mb-10 max-w-2xl leading-relaxed font-medium">
-              Mobil susah starter di jalan atau di rumah? Kami siap datang cepat, cek sistem kelistrikan gratis, dan pasang aki di tempat. Bayar aman setelah pemasangan selesai!
+              Mobil susah starter di jalan atau rumah? AkiSulSel adalah spesialis layanan antar pasang aki mobil dan motor 24 jam di Makassar dan seluruh wilayah Sulawesi Selatan. Produk bergaransi resmi pabrik!
             </p>
             <div className="flex flex-col sm:flex-row gap-4">
               <a className="inline-flex items-center justify-center gap-3 bg-secondary-container text-on-secondary-fixed font-bold text-base px-8 py-4.5 rounded-xl hover:scale-105 transition-all duration-300 shimmer-btn shadow-xl shadow-secondary-container/40 hover:shadow-secondary-container/60 hover:rotate-1" href={waLink} target="_blank" rel="noopener noreferrer">
@@ -223,8 +223,8 @@ function App() {
         {/* Why Choose Us (Interactive advantages cards) */}
         <section className="py-24 px-6 md:px-16 bg-primary text-on-primary" id="services">
           <div className="fade-in-up text-center mb-16 visible">
-            <span className="text-secondary-fixed font-bold uppercase tracking-widest mb-3 block text-sm">Mengapa Memilih Kami</span>
-            <h2 className="text-3xl md:text-4xl font-extrabold text-on-primary mb-6 drop-shadow-sm">Kenapa Memilih Layanan Ganti Aki 24 Jam Kami?</h2>
+            <span className="text-secondary-fixed font-bold uppercase tracking-widest mb-3 block text-sm">Toko Aki Makassar Terbaik</span>
+            <h2 className="text-3xl md:text-4xl font-extrabold text-on-primary mb-6 drop-shadow-sm">Kenapa Memilih Layanan Ganti Aki Kami?</h2>
             <div className="w-24 h-1 bg-secondary-container mx-auto rounded-full"></div>
           </div>
           <div className="grid grid-cols-1 md:grid-cols-3 gap-8 max-w-7xl mx-auto">
@@ -409,7 +409,7 @@ function App() {
             <span className="text-2xl font-extrabold text-on-primary">akisulsel.com</span>
           </div>
           <p className="text-sm md:text-base text-on-primary/80 max-w-md leading-relaxed font-medium">
-            Layanan ganti aki 24 jam dengan teknisi profesional yang siap datang ke lokasi Anda. Gratis cek kelistrikan, produk original bergaransi, serta respon cepat kapan pun Anda membutuhkan.
+            AkiSulSel adalah pusat penjualan aki mobil terbaik dan terpercaya di Makassar, melayani 24 jam hingga ke seluruh wilayah Sulawesi Selatan. Gratis cek kelistrikan, dijamin original bergaransi resmi.
           </p>
           <p className="text-on-primary/50 mt-4 text-xs">
             Copyright & design by ©akisulsel.com 2026. Hak cipta dilindungi.
