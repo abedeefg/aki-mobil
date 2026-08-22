@@ -186,7 +186,7 @@ function App() {
             <h1 className="text-4xl sm:text-5xl md:text-6xl font-black text-text-main mb-6 leading-[1.15] tracking-tight drop-shadow-sm">
               Toko Aki Makassar <span className="text-surface-tint relative after:content-[''] after:absolute after:left-0 after:bottom-1 after:w-full after:h-[6px] after:bg-secondary-container/40 after:-z-10">Terbaik & Terpercaya</span>
             </h1>
-            <p className="text-base sm:text-lg md:text-xl text-text-muted mb-10 max-w-2xl leading-relaxed font-medium">
+            <p className="text-base sm:text-lg md:text-xl text-text-main bg-white/80 backdrop-blur-sm p-5 rounded-2xl mb-10 max-w-2xl leading-relaxed font-semibold shadow-sm border border-white/50">
               Mobil susah starter di jalan atau rumah? AkiSulSel adalah spesialis layanan antar pasang aki mobil dan motor 24 jam di Makassar dan seluruh wilayah Sulawesi Selatan. Produk bergaransi resmi pabrik!
             </p>
             <div className="flex flex-col sm:flex-row gap-4">
