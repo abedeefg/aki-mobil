@@ -91,7 +91,7 @@ function App() {
       a: "Ya, teknisi kami akan datang langsung ke lokasi Anda untuk melakukan pengecekan dan pemasangan aki."
     },
     {
-      q: "Apakah aki yang dijual original dan bergaransi?",
+      q: "Apakah aki yang disediakan original dan bergaransi?",
       a: "Tentu saja. Semua produk aki yang kami sediakan adalah 100% original dan dilengkapi dengan garansi resmi."
     },
     {
@@ -409,7 +409,7 @@ function App() {
             <span className="text-2xl font-extrabold text-on-primary">akisulsel.com</span>
           </div>
           <p className="text-sm md:text-base text-on-primary/80 max-w-md leading-relaxed font-medium">
-            AkiSulSel adalah pusat penjualan aki mobil terbaik dan terpercaya di Makassar, melayani 24 jam hingga ke seluruh wilayah Sulawesi Selatan. Gratis cek kelistrikan, dijamin original bergaransi resmi.
+            AkiSulSel adalah pusat layanan aki mobil terbaik dan terpercaya di Makassar, melayani 24 jam hingga ke seluruh wilayah Sulawesi Selatan. Gratis cek kelistrikan, dijamin original bergaransi resmi.
           </p>
           <p className="text-on-primary/50 mt-4 text-xs">
             Copyright & design by ©akisulsel.com 2026. Hak cipta dilindungi.
