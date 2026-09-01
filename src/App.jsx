@@ -187,7 +187,7 @@ function App() {
               Toko Aki Makassar <span className="text-surface-tint relative after:content-[''] after:absolute after:left-0 after:bottom-1 after:w-full after:h-[6px] after:bg-secondary-container/40 after:-z-10">Terbaik & Terpercaya</span>
             </h1>
             <p className="text-base sm:text-lg md:text-xl text-text-main bg-white/80 backdrop-blur-sm p-5 rounded-2xl mb-10 max-w-2xl leading-relaxed font-semibold shadow-sm border border-white/50">
-              Mobil susah starter di jalan atau rumah? AkiSulSel adalah spesialis layanan antar pasang aki mobil dan motor 24 jam di Makassar dan seluruh wilayah Sulawesi Selatan. Produk bergaransi resmi pabrik!
+              Mobil susah starter di jalan atau rumah? AkiSulSel adalah spesialis layanan antar pasang aki mobil 24 jam di Makassar dan seluruh wilayah Sulawesi Selatan. Produk bergaransi resmi pabrik!
             </p>
             <div className="flex flex-col sm:flex-row gap-4">
               <a className="inline-flex items-center justify-center gap-3 bg-secondary-container text-on-secondary-fixed font-bold text-base px-8 py-4.5 rounded-xl hover:scale-105 transition-all duration-300 shimmer-btn shadow-xl shadow-secondary-container/40 hover:shadow-secondary-container/60 hover:rotate-1" href={waLink} target="_blank" rel="noopener noreferrer">
@@ -259,7 +259,7 @@ function App() {
 
             <div className="bg-primary p-8 border border-primary-fixed/10 card-hover-glow rounded-2xl fade-in-up visible shadow-md hover:border-secondary-container/30" style={{ transitionDelay: '100ms' }}>
               <h3 className="text-xl md:text-2xl text-secondary-fixed font-bold mb-3">Antar dan Pasang Aki</h3>
-              <p className="text-on-primary/80 text-sm md:text-base leading-relaxed">Layanan *delivery* cepat dan pemasangan aki mobil maupun motor ke lokasi manapun Anda berada 24 jam nonstop.</p>
+              <p className="text-on-primary/80 text-sm md:text-base leading-relaxed">Layanan *delivery* cepat dan pemasangan aki mobil ke lokasi manapun Anda berada 24 jam nonstop.</p>
             </div>
 
             <div className="bg-primary p-8 border border-primary-fixed/10 card-hover-glow rounded-2xl fade-in-up visible shadow-md hover:border-secondary-container/30" style={{ transitionDelay: '200ms' }}>
